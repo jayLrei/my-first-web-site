@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.menu {
+    color: white;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.menu > p {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.explain-container {
+    margin-top: 100px;
+    background-color: rgb(87, 87, 145);
+}
+.explain-container>div {
+    text-align: center;
+    color: white;
+    float : left;
+    width : 25%;
+  }
+  
+.shoes-container {
+    display: flex;
+    background-color: #eee;
+    padding: 20px;
+    margin: auto;
+}
+
+.shoes {
+    width: 33.3333%;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.shoes img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 40%;
+    background: black;
+    opacity: 0;
+    transition: all 1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.overlay:hover {
+    opacity:0.4;
+}
+
+i {
+    background-color:burlywood;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+  @media screen and (max-width : 992px) {
+    .explain-container>div {
+      float : left;
+      width : 50%;
+    }
+  }
+  
+  @media screen and (max-width : 768px) {
+    .explain-container>div {
+      float : left;
+      width : 100%;
+    }
+  }
+
+@media screen and (max-width:992px) {
+    .menu {
+        font-size: 20px;
+    }
+    .menu > p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .container > menu {
+        width: 50%;
+        float: left;
+    }
+}

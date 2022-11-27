@@ -1,0 +1,117 @@
+.main-background {
+    width:100%;
+    height: 500px;
+    background-image: url(shoes.jpg);
+
+    /* div 박스 그냥 다 채워라-> cover */
+    background-size: cover;
+
+    /* 근데 이건 위치가 맘에 안들 수도 잇음 */
+    /* 이럴 때 사용하는게  */
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    /* 배경 스크롤시 위치 조정 가능 */
+    background-attachment: fixed;
+
+    /* 보정입히기 */
+
+    padding: 1px;
+}
+
+.title{
+    color:white;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+    font-weight: 1000;
+}
+.content{
+    color:white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.btn {
+    float:right;
+    float:bottom;
+    margin-right: 50px;
+    width: 100px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+.box {
+    width: 80%;
+    /* 화면 크게 할 때 최대 폭 정하기 !! */
+    max-width: 700px;
+    /* 작게할 때는 min-width */
+    background-color: beige;
+    height: 300px;
+    margin: auto;
+    z-index: 5;
+    position: relative;
+    bottom: 50px;
+    text-align: center;
+    padding: 1px;
+    margin-top: 20px;
+
+    /* padding 주고 나서 amx-width 안 맞을때는? */
+    /* padding 포함하게 해주는 밑의 태그 사용 */
+    
+}
+.box h3 {
+    font-size: 35px;
+    font-weight: bolder;
+    margin-top: 40px;
+}
+.box p {
+    position: relative;
+    top: 30px;
+    font-size: 23px;
+    font-weight: lighter;
+}
+
+.modal {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 600px;
+    display: block;
+    background-color: rgb(166, 110, 110);
+    margin-left: 300px;
+    margin-top: 100px;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.form-background{
+    background-color: black;
+    padding: 30px;
+}
+.form-white {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+.form-input {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+}
+.w-50 {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+.w-100 {
+    width: 100%;
+    padding: 10px;
+}
