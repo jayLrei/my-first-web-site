@@ -14,7 +14,7 @@
 
   </head>
   <style>
-    .button {
+    .buy {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -32,16 +32,16 @@
   <body>
     <p>
     <div class="container">
-      <p><button class="btn btn-danger price">가격순 정렬</button>
+      <p>
+        <button class="btn btn-danger price">가격순 정렬</button>
         <button class="btn btn-danger name">이름순 역정렬</button>
-        <button class="btn btn-danger name2">이름순 정렬</button></p>
-      
-        <div class="row">
-      
-        </div>
-     <button class="btn btn-danger more">더보기</button>
+        <button class="btn btn-danger name2">이름순 정렬</button>
+      </p>
+        <div class="row"></div>
+        <p><button class="btn btn-danger more">더보기</button></p>
     </div> 
 </p>
+
 
 
     <script>
@@ -57,7 +57,7 @@
               <img src="https://via.placeholder.com/600" class="w-100">
               <h5>${products[i].title}</h5>
               <p>가격 : ${products[i].price}</p>
-              <p><button class='button buy'}>장바구니</button></p>
+              <button class='buy'}>장바구니</button>
             </div>`    
     document.querySelector('.row').insertAdjacentHTML('beforeend', template)
     });
@@ -89,12 +89,69 @@
 // 근데 local storage가 있을 때는 자료를 수정해야함.
 
 //할거 2. cart.html만들어서 local storage에 저장된 상품명들 다 보여주기
-  /*document.querySelector(".buy").addEventListener('click',function(){
-    localStorage.setItem()
-  })*/
 
-     
+  //할거 1
 
+        console.log(document.querySelector('.buy').previousElementSibling);
+        console.log($('.buy').siblings());
+
+//       $('.buy').click(function(){
+//        console.log(e.target.previousElementSibling.previousElementSibling);
+//      });
+        $('.buy').click(function(a){
+          console.log($(a.target).siblings('h5').text());
+          console.log($(a.target).siblings('p').text());
+        });
+
+        $('.buy').click(function(e){
+ /*         장바구니에 아무것도 없으면
+          cart라는 항목 추가.
+          장바구니에 있으면 그 항목 없애고, 수정 */
+          var cart = [$(e.target).siblings('h5').text(),$(e.target).siblings('p').text()]
+          var newcart = JSON.stringify(cart);
+
+          if(localStorage.getItem('장바구니') == null){
+            localStorage.setItem('장바구니',newcart)
+          }
+          else if(localStorage.getItem('장바구니') != null){
+            localStorage.removeItem('장바구니');
+            localStorage.setItem('장바구니',newcart);
+          }
+        });
+
+
+        //local 뭐시기 정리
+        var arr = [1,2,3,4,5]; //어레이
+        console.log(arr[3]); //어레이 추출
+ 
+        localStorage.setItem('asdfasdf',arr); //문자로 인식 -> 자료가 깨질수있음 json 사용.
+
+        var newarrr = JSON.stringify(arr);
+        localStorage.setItem('nume',newarrr); //배열의 형태를 유지한 문자.
+
+        console.log(localStorage.getItem('nume')); //문자
+        console.log(JSON.parse(localStorage.getItem('nume'))); //배열
+
+
+        //js에서 siblings 추출하기
+        console.log(document.querySelector('.buy').previousElementSibling);
+        console.log(document.querySelector('.buy').previousElementSibling.previousElementSibling);
+        console.log(document.querySelector('.buy').previousElementSibling.previousElementSibling.previousElementSibling);
+
+        console.log( $(".buy").prev() );
+
+        
+
+
+/*      for(i=0;i<3;i++){
+      document.querySelectorAll('.buy')[i].addEventListener('click',function(){
+        if(localStorage.getItem('장바구니3') == null){
+          localStorage.setItem('장바구니'+[i],$(this).siblings())}
+        else if(localStorage.getItem('장바구니3') != null){
+          localStorage.removeItem('장바구니3');
+          localStorage.setItem('장바구니'+[i],$(this).siblings())
+        }})}
+      ;*/
 
 
 //더보기 버튼
