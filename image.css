@@ -1,0 +1,6 @@
+.darkimage{
+  filter = brightness(40%);
+}
+.image{
+  z-index: 5;
+}

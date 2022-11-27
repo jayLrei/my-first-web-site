@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="image.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  </head>
+  <style>
+  </style>
+
+  <body>
+
+  <div class="crayon">
+    <button class="btn">
+      <img src="001.png" class="image">
+    </button>
+  </div>
+
+    <script>
+      $('.btn').on('click',function(){
+        $('.image').toggleClass('selected');
+      });
+    </script>
+  </body>
+</html>

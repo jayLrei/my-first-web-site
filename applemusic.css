@@ -1,0 +1,27 @@
+.card-background {
+    height: 3000px;
+    margin-top: 600px;
+    margin-bottom: 1600px;
+}
+.card-box img{
+    display: block;
+    margin: auto;/*가로 중앙에 배치한다는 뜻*/
+    max-width: 80%;
+}
+.card-box { 
+    transition:all 0.1s;
+    position:sticky;
+    top : 200px;
+    margin-top:50px;
+}
+.font {
+    position:sticky;
+    top : 50px;
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+}
+.menu img{
+    width: 100%;
+}
